@@ -69,3 +69,11 @@ function openModal(meal) {
 function closeModal() {
     overlay.style.display = "none";
 }
+
+function startSearch() {
+    const query = searchBox.value.trim();
+    if (!query) return;
+
+    loader.style.display = "flex";
+    fetchRecipes(query);
+}
