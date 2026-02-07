@@ -102,7 +102,7 @@ form button:active {
     display: flex;
     justify-content: center;
     margin-top: 40px;
-   
+
 }
 
 .hero-img img {
@@ -120,18 +120,21 @@ form button:active {
 @media (max-width: 768px) {
 
     form input {
+        height: 30px;
         max-width: 300px;
         font-size: 13px;
     }
 
     form button {
+        height: 30px;
         font-size: 16px;
         padding: 0 14px;
     }
 
     nav img {
-        height: 60px;
-        width: 60px;
+        height: 50px;
+        width: 50px;
+        margin: 15px;
     }
 }
 
@@ -201,7 +204,8 @@ form button:active {
 }
 
 .recipe-modal img {
-    width: 160px;   
+    margin-top: 25px;
+    width: 160px;
     height: 160px;
     object-fit: cover;
     border-radius: 15px;
@@ -212,21 +216,31 @@ form button:active {
 
 /* ===== CLOSE BTN ===== */
 .close-btn {
-    position: fixed;
-    top: 65px;
-    right: 320px;
+    position: absolute;
+
+    top: 14px;
+    right: 14px;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
     background: #2e2e2e;
     color: #fff;
     border: none;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    font-size: 15px;
-    cursor: pointer;
+
+    font-size: 18px;
+    font-weight: bold;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    cursor: pointer;
+    z-index: 10;
+    /* 🔥 VERY IMPORTANT */
 }
+
 
 
 /* ===== LOADER ===== */
@@ -255,15 +269,38 @@ form button:active {
     }
 }
 
-/* ===== MOBILE ===== */
+
 @media (max-width: 768px) {
-    .recipe-card {
-        width: 45%;
+    form input {
+        width: px;
     }
+
+    .recipe-card {
+        width: 22%;
+        /* 🔥 4 in one row */
+    }
+
+    
 }
 
 @media (max-width: 480px) {
     .recipe-card {
-        width: 90%;
+        width: 22%;
+        font-size: 7px;
+        /* 🔥 still 4 */
+    }
+
+    .close-btn {
+        position: fixed;
+        top: 45px;
+        right: 320px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .close-btn {
+        top: 55px;
+        right: 50px;
     }
 }
