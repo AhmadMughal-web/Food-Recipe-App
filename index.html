@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Food Recipes by Ahmad</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <img src="logo.img.png.jpeg" alt="logo">
+        <div class="search-wrapper">
+            <input type="text" placeholder="Search for Recipes..." class="searchBox" id="searchBox">
+            <button type="button" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <img src="logo.img.png.jpeg" alt="logo">
+    </nav>
+
+    <!-- HERO (shown when no results) -->
+    <div class="hero-section" id="heroSection">
+        <div class="hero-text">
+            <h1>Discover Delicious <span>Recipes</span></h1>
+            <p>Search from thousands of mouth-watering dishes around the world</p>
+            <div class="hero-pills">
+                <span class="hero-pill" onclick="quickSearch('chicken')">🍗 Chicken</span>
+                <span class="hero-pill" onclick="quickSearch('pasta')">🍝 Pasta</span>
+                <span class="hero-pill" onclick="quickSearch('beef')">🥩 Beef</span>
+                <span class="hero-pill" onclick="quickSearch('cake')">🎂 Cake</span>
+                <span class="hero-pill" onclick="quickSearch('sushi')">🍣 Sushi</span>
+                <span class="hero-pill" onclick="quickSearch('soup')">🍜 Soup</span>
+            </div>
+        </div>
+        <div class="hero-img">
+            <img src="hero.img.png.jpeg" alt="Food Recipes by Ahmad">
+        </div>
+    </div>
+
+
+    <!-- RECIPE RESULTS -->
+    <main>
+        <div class="back-btn-wrapper" id="backBtnWrapper" style="display:none;">
+            <button class="back-home-btn" id="backHomeBtn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            </button>
+        </div>
+        <div class="recipe-container" id="recipeContainer"></div>
+    </main>
+
+    <!-- OVERLAY + MODAL -->
+    <div class="overlay" id="overlay">
+        <div class="recipe-modal" id="recipeModal"></div>
+    </div>
+
+    <!-- LOADER -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+        <p class="loader-text">Finding delicious recipes...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
