@@ -9,7 +9,7 @@
 
 <br>
 
-![UI Preview](hero.img.png.jpeg)
+![UI Preview](/images/hero.png)
 
 ## ⚡ Unleash Your Inner Chef
 **Food Recipes by AHMAD** is a premium culinary platform designed to bridge the gap between delicious food and modern digital elegance. Powered by a cinematic gradient UI, it brings thousands of mouth-watering global dishes straight to your device with lightning speed.

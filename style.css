@@ -5,7 +5,8 @@
     font-family: 'Segoe UI', Verdana, Geneva, Tahoma, sans-serif;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -28,7 +29,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 500;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.4);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
 }
 
 nav img {
@@ -44,7 +45,7 @@ nav img {
 
 nav img:hover {
     transform: rotate(10deg) scale(1.1);
-    box-shadow: 0 0 14px rgba(217,74,56,0.7);
+    box-shadow: 0 0 14px rgba(217, 74, 56, 0.7);
 }
 
 /* ===== SEARCH BAR ===== */
@@ -72,7 +73,7 @@ nav img:hover {
 
 .search-wrapper input:focus {
     background: #fff;
-    box-shadow: 0 0 0 3px rgba(217,74,56,0.2);
+    box-shadow: 0 0 0 3px rgba(217, 74, 56, 0.2);
 }
 
 .search-wrapper button {
@@ -117,13 +118,13 @@ nav img:hover {
     font-size: clamp(22px, 4vw, 44px);
     color: #2e2e2e;
     font-weight: 700;
-    text-shadow: 2px 2px 0 rgba(255,255,255,0.4);
+    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.4);
     line-height: 1.2;
 }
 
 .hero-text h1 span {
     color: #d94a38;
-    text-shadow: 2px 2px 0 rgba(255,255,255,0.3);
+    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.3);
 }
 
 .hero-text p {
@@ -145,7 +146,7 @@ nav img:hover {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(255,255,255,0.85);
+    background: rgba(255, 255, 255, 0.85);
     color: #d94a38;
     border: 2px solid #d94a38;
     padding: 10px 22px;
@@ -173,8 +174,8 @@ nav img:hover {
 }
 
 .hero-pill {
-    background: rgba(255,255,255,0.55);
-    border: 1.5px solid rgba(255,255,255,0.8);
+    background: rgba(255, 255, 255, 0.55);
+    border: 1.5px solid rgba(255, 255, 255, 0.8);
     color: #2e2e2e;
     font-size: 12px;
     font-weight: 600;
@@ -202,7 +203,7 @@ nav img:hover {
 }
 
 .hero-img img {
-    max-width: 680px;
+    max-width: 1000px;
     width: 90%;
     max-height: calc(100vh - 280px);
     height: auto;
@@ -210,12 +211,12 @@ nav img:hover {
     border-radius: 24px;
     cursor: pointer;
     transition: transform 0.4s, box-shadow 0.4s;
-    box-shadow: 0 16px 48px rgba(0,0,0,0.25);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
 }
 
 .hero-img img:hover {
     transform: scale(1.02) translateY(-4px);
-    box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
 }
 
 @media (max-width: 768px) {
@@ -256,13 +257,13 @@ nav img:hover {
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
     position: relative;
 }
 
 .recipe-card:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 16px 40px rgba(0,0,0,0.22);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
 }
 
 .recipe-card img {
@@ -328,7 +329,7 @@ nav img:hover {
 .overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.55);
+    background: rgba(0, 0, 0, 0.55);
     backdrop-filter: blur(6px);
     display: none;
     justify-content: center;
@@ -339,8 +340,13 @@ nav img:hover {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* ===== MODAL ===== */
@@ -358,8 +364,15 @@ nav img:hover {
 }
 
 @keyframes slideUp {
-    from { transform: translateY(40px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .modal-header {
@@ -375,7 +388,7 @@ nav img:hover {
     object-fit: cover;
     border-radius: 50%;
     border: 4px solid #fff;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     margin-bottom: 14px;
     display: block;
     margin-left: auto;
@@ -386,7 +399,7 @@ nav img:hover {
     font-size: 20px;
     font-weight: 700;
     color: #2e2e2e;
-    text-shadow: 1px 1px 0 rgba(255,255,255,0.4);
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .modal-meta {
@@ -398,7 +411,7 @@ nav img:hover {
 }
 
 .modal-badge {
-    background: rgba(255,255,255,0.6);
+    background: rgba(255, 255, 255, 0.6);
     color: #2e2e2e;
     font-size: 12px;
     font-weight: 600;
@@ -482,20 +495,20 @@ nav img:hover {
 
 /* ===== CLOSE BUTTON ===== */
 .close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 14px;
     right: 14px;
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     color: #fff;
     border: none;
     font-size: 20px;
     font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
     transition: background 0.2s, transform 0.2s;
     z-index: 10;
@@ -515,7 +528,7 @@ nav img:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgba(0,0,0,0.45);
+    background: rgba(0, 0, 0, 0.45);
     backdrop-filter: blur(4px);
     z-index: 2000;
     gap: 14px;
@@ -524,7 +537,7 @@ nav img:hover {
 .spinner {
     width: 56px;
     height: 56px;
-    border: 5px solid rgba(255,255,255,0.3);
+    border: 5px solid rgba(255, 255, 255, 0.3);
     border-top: 5px solid #fff;
     border-radius: 50%;
     animation: spin 0.85s linear infinite;
@@ -537,7 +550,9 @@ nav img:hover {
 }
 
 @keyframes spin {
-    100% { transform: rotate(360deg); }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* ===== RESPONSIVE ===== */
