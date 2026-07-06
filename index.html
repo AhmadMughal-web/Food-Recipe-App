@@ -27,12 +27,15 @@
             <h1>Discover Delicious <span>Recipes</span></h1>
             <p>Search from thousands of mouth-watering dishes around the world</p>
             <div class="hero-pills">
-                <span class="hero-pill" onclick="quickSearch('chicken')">🍗 Chicken</span>
-                <span class="hero-pill" onclick="quickSearch('pasta')">🍝 Pasta</span>
-                <span class="hero-pill" onclick="quickSearch('beef')">🥩 Beef</span>
-                <span class="hero-pill" onclick="quickSearch('cake')">🎂 Cake</span>
-                <span class="hero-pill" onclick="quickSearch('sushi')">🍣 Sushi</span>
-                <span class="hero-pill" onclick="quickSearch('soup')">🍜 Soup</span>
+                <span class="hero-pill" onclick="quickSearch('chicken')"><i class="fa-solid fa-drumstick-bite"></i>
+                    Chicken</span>
+                <span class="hero-pill" onclick="quickSearch('pasta')"><i class="fa-solid fa-bowl-food"></i>
+                    Pasta</span>
+                <span class="hero-pill" onclick="quickSearch('beef')"><i class="fa-solid fa-bacon"></i> Beef</span>
+                <span class="hero-pill" onclick="quickSearch('cake')"><i class="fa-solid fa-cake-candles"></i>
+                    Cake</span>
+                <span class="hero-pill" onclick="quickSearch('sushi')"><i class="fa-solid fa-fish"></i> Sushi</span>
+                <span class="hero-pill" onclick="quickSearch('soup')"><i class="fa-solid fa-bowl-rice"></i> Soup</span>
             </div>
         </div>
         <div class="hero-img">
@@ -42,10 +45,10 @@
 
 
     <!-- RECIPE RESULTS -->
-    <main>
+    <main id="mainContent">
         <div class="back-btn-wrapper" id="backBtnWrapper" style="display:none;">
             <button class="back-home-btn" id="backHomeBtn">
-                <i class="fa-solid fa-arrow-left"></i> Back to Home
+                <i class="fa-solid fa-arrow-left"></i>
             </button>
         </div>
         <div class="recipe-container" id="recipeContainer"></div>

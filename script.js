@@ -7,6 +7,7 @@ const overlay = document.getElementById("overlay");
 const modal = document.getElementById("recipeModal");
 const loader = document.getElementById("loader");
 const heroSection = document.getElementById("heroSection");
+const mainContent = document.getElementById("mainContent");
 
 // Search on button click
 searchBtn.addEventListener("click", triggerSearch);
@@ -19,6 +20,7 @@ searchBox.addEventListener("keydown", (e) => {
 // Back home button
 backHomeBtn.addEventListener("click", () => {
     heroSection.style.display = "flex";
+    mainContent.style.display = "none";
     recipeContainer.innerHTML = "";
     backBtnWrapper.style.display = "none";
     searchBox.value = "";
@@ -33,8 +35,6 @@ overlay.addEventListener("click", (e) => {
 document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeModal();
 });
-
-
 
 function quickSearch(term) {
     searchBox.value = term;
@@ -69,8 +69,11 @@ async function fetchRecipes(query) {
         hideLoader();
         recipeContainer.innerHTML = "";
 
+        // Hero hide, main show — dono lines hamesha yahan chalengi
+        heroSection.style.display = "none";
+        mainContent.style.display = "block";
+
         if (!data.meals) {
-            heroSection.style.display = "none";
             recipeContainer.innerHTML = `
                 <div class="no-results">
                     <i class="fa-solid fa-bowl-food"></i>
@@ -81,9 +84,6 @@ async function fetchRecipes(query) {
             return;
         }
 
-        // Hide hero when results are shown
-        heroSection.style.display = "none";
-        document.body.classList.remove("hero-active");
         backBtnWrapper.style.display = "flex";
 
         data.meals.forEach(meal => {
@@ -102,6 +102,8 @@ async function fetchRecipes(query) {
 
     } catch (err) {
         hideLoader();
+        heroSection.style.display = "none";
+        mainContent.style.display = "block";
         recipeContainer.innerHTML = `
             <div class="no-results">
                 <i class="fa-solid fa-wifi"></i>
@@ -114,9 +116,7 @@ async function fetchRecipes(query) {
 
 function openModal(meal) {
     overlay.style.display = "flex";
-    document.body.style.overflow = "hidden";
 
-    // Build ingredients as pills
     let ingredients = "";
     for (let i = 1; i <= 20; i++) {
         const ing = meal[`strIngredient${i}`];
@@ -157,5 +157,4 @@ function openModal(meal) {
 
 function closeModal() {
     overlay.style.display = "none";
-    document.body.style.overflow = "";
 }
